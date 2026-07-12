@@ -21,6 +21,11 @@ export const metadata: Metadata = {
   title: "Velora Valley Villa | Luxury Mountain Sanctuary by Avenor Hospitality",
   description: "Immerse yourself in serenity at Velora Valley Villa. A high-end minimalist 3 BHK family stay amidst the mountains, featuring panoramic Dhom Dam & Elephant Head Point views.",
   keywords: ["Velora Valley Villa", "Avenor Hospitality", "3 BHK Villa Mahabaleshwar", "Luxury Villa Booking", "Mountain View Stay"],
+  icons: {
+    icon: [
+      { url: '/icon.svg?v=2', type: 'image/svg+xml' }
+    ],
+  },
   openGraph: {
     title: "Velora Valley Villa | Luxury Mountain Sanctuary",
     description: "Experience premium comfort and spectacular mountain vistas. Avenor Hospitality presents an elegant 3 BHK villa with Elephant Head Point and Dhom Dam views.",
