@@ -6,9 +6,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Phone, ArrowRight, Menu, X, Home as HomeIcon, Mountain, Waves, Check, ChevronLeft, ChevronRight, MapPin, Castle, Camera } from "lucide-react";
 
 const heroBackgrounds = [
-  { type: "video", src: "/real_assets/Velora Valley Villa vd3.mp4" },
+  { type: "video", src: "/real_assets/Velora-Valley-Villa-vd3.mp4" },
   { type: "image", src: "/real_assets/VV1.jpeg" },
-  { type: "video", src: "/real_assets/Velora Valley Villa vd1.mp4" },
+  { type: "video", src: "/real_assets/Velora-Valley-Villa-vd1.mp4" },
   { type: "image", src: "/real_assets/VV6.jpeg" },
   { type: "image", src: "/real_assets/VV5.jpeg" }
 ];
