@@ -1516,7 +1516,7 @@ export default function Home() {
                   className="flex items-center justify-center gap-2 border border-forest/20 hover:border-forest text-text-primary hover:bg-forest/5 text-sm font-semibold tracking-wide py-3 rounded-sm transition-all duration-300"
                 >
                   <Phone className="w-4 h-4 text-forest" />
-                  <span>Call Concierge Now</span>
+                  <span>Call to Book</span>
                 </a>
                 <button
                   onClick={closeModal}
