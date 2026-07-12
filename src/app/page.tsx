@@ -572,7 +572,6 @@ export default function Home() {
             {bg.type === "video" ? (
               <video
                 src={bg.src}
-                poster={bg.poster}
                 autoPlay
                 loop
                 muted
