@@ -5,6 +5,14 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Phone, ArrowRight, Menu, X, Home as HomeIcon, Mountain, Waves, Check, ChevronLeft, ChevronRight, MapPin, Castle, Camera } from "lucide-react";
 
+const heroBackgrounds = [
+  { type: "video", src: "/real_assets/Velora Valley Villa vd3.mp4", poster: "/real_assets/Velora Valley Villa Ad1.jpeg" },
+  { type: "image", src: "/real_assets/VV1.jpeg" },
+  { type: "video", src: "/real_assets/Velora Valley Villa vd1.mp4" },
+  { type: "image", src: "/real_assets/VV6.jpeg" },
+  { type: "image", src: "/real_assets/VV5.jpeg" }
+];
+
 const galleryItems = [
   {
     src: "/images/VV1.jpeg",
@@ -246,6 +254,15 @@ export default function Home() {
   const [showStickyBar, setShowStickyBar] = useState(false);
   const [activeSection, setActiveSection] = useState("hero");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [currentHeroBg, setCurrentHeroBg] = useState(0);
+
+  // Auto-advance hero background
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentHeroBg((prev) => (prev + 1) % heroBackgrounds.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
 
   // Booking details & Modal states
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -544,15 +561,35 @@ export default function Home() {
         className="relative h-screen w-full flex flex-col justify-center items-center text-center text-white px-5 overflow-hidden md:h-auto md:min-h-screen md:pt-32 md:pb-28"
       >
         <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/10 to-bg-primary z-[1]" />
-        <video
-          src="/images/Velora Valley Villa vd3.mp4"
-          poster="/images/Velora Valley Villa Ad1.jpeg"
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover z-0"
-        />
+        
+        {heroBackgrounds.map((bg, index) => (
+          <div
+            key={index}
+            className={`absolute inset-0 w-full h-full z-0 transition-opacity duration-1000 ease-in-out ${
+              index === currentHeroBg ? "opacity-100" : "opacity-0"
+            }`}
+          >
+            {bg.type === "video" ? (
+              <video
+                src={bg.src}
+                poster={bg.poster}
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-full object-cover"
+              />
+            ) : (
+              <Image
+                src={bg.src}
+                alt={`Velora Valley Villa view ${index}`}
+                fill
+                className="object-cover"
+                priority={index === 0}
+              />
+            )}
+          </div>
+        ))}
 
         <div className="relative z-10 max-w-[900px] mb-12 md:mb-8">
           <motion.span
