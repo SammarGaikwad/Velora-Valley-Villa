@@ -380,7 +380,7 @@ export default function Home() {
       setShowStickyBar(scrollPos > heroHeight - 150);
 
       // Active section update
-      const sections = ["hero", "highlights", "about", "gallery"];
+      const sections = ["hero", "about", "highlights", "gallery"];
       for (const sectionId of sections) {
         const el = document.getElementById(sectionId);
         if (el) {
@@ -471,8 +471,8 @@ export default function Home() {
           <nav className="hidden md:flex items-center gap-10">
             {[
               { id: "hero", label: "Home" },
-              { id: "highlights", label: "Highlights" },
               { id: "about", label: "The Villa" },
+              { id: "highlights", label: "Highlights" },
               { id: "gallery", label: "Gallery" },
             ].map((link) => (
               <a
@@ -535,8 +535,8 @@ export default function Home() {
           >
             {[
               { id: "hero", label: "Home" },
-              { id: "highlights", label: "Highlights" },
               { id: "about", label: "The Villa" },
+              { id: "highlights", label: "Highlights" },
               { id: "gallery", label: "Gallery" },
             ].map((link) => (
               <a
@@ -1299,8 +1299,8 @@ export default function Home() {
             </h4>
             <div className="flex flex-row flex-wrap md:flex-col gap-5 md:gap-3 justify-center md:justify-start items-center md:items-start text-sm">
               <a href="#hero" className="hover:text-gold-light hover:-translate-y-0.5 md:hover:translate-y-0 md:hover:translate-x-1 transition-all duration-300">Home</a>
-              <a href="#highlights" className="hover:text-gold-light hover:-translate-y-0.5 md:hover:translate-y-0 md:hover:translate-x-1 transition-all duration-300">Highlights</a>
               <a href="#about" className="hover:text-gold-light hover:-translate-y-0.5 md:hover:translate-y-0 md:hover:translate-x-1 transition-all duration-300">The Villa</a>
+              <a href="#highlights" className="hover:text-gold-light hover:-translate-y-0.5 md:hover:translate-y-0 md:hover:translate-x-1 transition-all duration-300">Highlights</a>
               <a href="#experiences" className="hover:text-gold-light hover:-translate-y-0.5 md:hover:translate-y-0 md:hover:translate-x-1 transition-all duration-300">Experiences</a>
             </div>
           </div>
