@@ -1251,11 +1251,11 @@ export default function Home() {
           <div className="flex md:hidden items-center justify-between w-full gap-3">
             <div className="flex flex-col text-left">
               <span className="font-serif text-sm font-medium text-text-primary">Velora Valley</span>
-              <a href="tel:+919372890636" className="text-xs font-semibold text-gold-dark">+91 93728 90636</a>
+              <a href="tel:+917718953578" className="text-xs font-semibold text-gold-dark">+91 77189 53578</a>
             </div>
             <div className="flex items-center gap-2 flex-1 justify-end">
               <a
-                href={`https://wa.me/919372890636?text=${encodeURIComponent(
+                href={`https://wa.me/917718953578?text=${encodeURIComponent(
                   checkin && checkout
                     ? `Hi Velora Valley Villa! I am interested in booking the 3 BHK villa from ${formatDisplayDate(checkin)} to ${formatDisplayDate(checkout)} for ${guests === "6" ? "6+" : guests} guests.`
                     : "I am interested in booking Velora Valley Villa"
@@ -1314,7 +1314,7 @@ export default function Home() {
               Elephant Head Point Road,<br />Mahabaleshwar, Maharashtra
             </p>
             <p className="mb-6">
-              Inquiries: <a href="tel:+919372890636" className="text-gold-light hover:text-white transition-colors">+91 93728 90636</a>
+              Inquiries: <a href="tel:+917718953578" className="text-gold-light hover:text-white transition-colors">+91 77189 53578</a>
             </p>
             <div className="flex items-center gap-5 text-[11px] font-bold tracking-[0.2em] uppercase mt-2">
               <a href="#" className="text-white/60 hover:text-gold transition-colors">Instagram</a>
@@ -1499,7 +1499,7 @@ export default function Home() {
 
               <div className="flex flex-col gap-3">
                 <a
-                  href={`https://wa.me/919372890636?text=${encodeURIComponent(
+                  href={`https://wa.me/917718953578?text=${encodeURIComponent(
                     `Hi Velora Valley Villa! I am interested in booking the 3 BHK villa from ${formatDisplayDate(checkin)} to ${formatDisplayDate(checkout)} for ${guests === "6" ? "6+" : guests} guests.`
                   )}`}
                   target="_blank"
@@ -1512,7 +1512,7 @@ export default function Home() {
                   <span>Inquire via WhatsApp</span>
                 </a>
                 <a
-                  href="tel:+919372890636"
+                  href="tel:+917718953578"
                   className="flex items-center justify-center gap-2 border border-forest/20 hover:border-forest text-text-primary hover:bg-forest/5 text-sm font-semibold tracking-wide py-3 rounded-sm transition-all duration-300"
                 >
                   <Phone className="w-4 h-4 text-forest" />
